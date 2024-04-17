@@ -18,20 +18,20 @@
   <title>Document</title>
 </head>
 <body>
-  <div id="app" class="container">
+  <div id="app" class="container-sc">
     <div class="container text-center ">
-      <h1>Lista dischi</h1>
+      <h1 class="title pb-4 pt-4 ">Lista dischi</h1>
     </div>
     <div class="container">
       <div class="row flex-wrap  ">
         <div v-for="(disco,index) in listaDischi" :key="index" class="col-4 d-flex justify-content-center">
-          <div class="card">
+          <div class=" p-3 card-sc text-center mb-2  ">
           <div class="img-container">
           <img :src="disco.poster" alt="">
           </div>
           <div class="titolo">{{disco.title}}</div>
-          <div>{{disco.author}}</div>
-          <div>{{disco.year}}</div>
+          <div class="author">{{disco.author}}</div>
+          <div class="year">{{disco.year}}</div>
           </div>
         </div>
         

@@ -1,6 +1,12 @@
+.container-sc{
+  background-color: rgb(9, 14, 27);
+}
+.title{
+  color: rgb(237, 215, 208);
+}
 .img-container{
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
 }
 img{
   width: 100%;
@@ -8,5 +14,16 @@ img{
   object-fit: contain;
 }
 .titolo{
-  color: red;
+  color: white;
+  font-size: 1.2rem;
+}
+.author{
+  color:rgb(135, 124, 124) ;
+}
+.year{
+  color: white;
+}
+.card-sc{
+  background-color: rgb(4, 4, 8);
+  
 }
