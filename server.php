@@ -2,11 +2,21 @@
 // prendo il file json esterno e salvo come stringa il suo contenuto
 $json_string= file_get_contents('dischi.json');
 // ricodifico la stringa trasformandola in un elemento php 
-$lista_dischi=json_decode($json_string);
+$lista_dischi=json_decode($json_string,true);
 
 
 
-// logica
+if(isset($_POST['newDiskTitle'])){
+  $new_disk=[
+    'title' => $_POST['newDiskTitle'],
+    'year' => $_POST['newDiskYear'],
+    'author' => $_POST['newDiskAuthor'],
+    'poster' => $_POST['newDiskPoster'],
+
+  ];
+  $lista_dischi[]= $new_disk;
+  file_put_contents('dischi.json',json_encode($lista_dischi));
+}
 
 
 

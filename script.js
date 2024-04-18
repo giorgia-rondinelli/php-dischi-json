@@ -5,6 +5,12 @@ createApp({
     return{
       apiUrl:'server.php',
       listaDischi:[],
+      newDisk:{
+        title:'',
+        year:'',
+        author:'',
+        poster:'',
+      }
 
     }
   },
@@ -14,6 +20,20 @@ createApp({
       .then(res=>{
         this.listaDischi=res.data
         console.log(this.listaDischi)
+      })
+    },
+
+    addDisk(){
+      
+      const data = new FormData();
+      data.append('newDiskTitle',this.newDisk.title)
+      data.append('newDiskYear', this.newDisk.year)
+      data.append('newDiskAuthor', this.newDisk.author)
+      data.append('newDiskPoster', this.newDisk.poster);
+
+      axios.post( this.apiUrl,data)
+      .then(res=>{
+        this.listaDischi=res.data
       })
     }
   },

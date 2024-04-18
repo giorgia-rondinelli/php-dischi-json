@@ -36,6 +36,38 @@
         </div>
         
       </div>
+      <div class="container">
+       <h2 class="title">Add disk</h2>
+          <div class="mb-3">
+            <label  class=" title">Add title</label>
+            <input 
+            v-model="newDisk.title"
+            type="text" class="form-control" >
+            
+          </div>
+          <div class="mb-3">
+            <label  class="form-label title">Add author</label>
+            <input v-model="newDisk.author" type="text" class="form-control" >
+            
+          </div>
+          <div class="mb-3">
+            <label  class="form-label title">Add year</label>
+            <input v-model="newDisk.year" type="text" class="form-control" >
+            
+          </div>
+          <div class="mb-3">
+            <label  class="form-label title">Add img</label>
+            <input v-model="newDisk.poster" type="text" class="form-control" >
+            
+          </div>
+         
+          <button @click.stop="addDisk" type="" class="btn btn-primary">Add disk</button>
+        
+        
+       
+      <div class="row">
+        
+      </div>
     </div>
   </div> 
   <script src="script.js"></script> 
