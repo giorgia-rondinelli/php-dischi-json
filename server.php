@@ -18,6 +18,12 @@ if(isset($_POST['newDiskTitle'])){
   file_put_contents('dischi.json',json_encode($lista_dischi));
 }
 
+if(isset($_POST['indexToRemove'])){
+  $indexToRemove= $_POST['indexToRemove'];
+  array_splice($lista_dischi,$indexToRemove,1);
+  file_put_contents('dischi.json', json_encode($lista_dischi));
+}
+
 
 
 

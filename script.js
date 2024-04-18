@@ -24,7 +24,7 @@ createApp({
     },
 
     addDisk(){
-      
+
       const data = new FormData();
       data.append('newDiskTitle',this.newDisk.title)
       data.append('newDiskYear', this.newDisk.year)
@@ -34,6 +34,19 @@ createApp({
       axios.post( this.apiUrl,data)
       .then(res=>{
         this.listaDischi=res.data
+      })
+    },
+
+    removeDisk(index){
+      
+      const data = new FormData()
+       data.append('indexToRemove',index)
+       
+
+      axios.post(this.apiUrl,data)
+      .then(res=> {
+        this.listaDischi=res.data
+        
       })
     }
   },
