@@ -24,6 +24,12 @@ if(isset($_POST['indexToRemove'])){
   file_put_contents('dischi.json', json_encode($lista_dischi));
 }
 
+if(isset($_POST['indexToLike'])){
+  $indexToLike=$_POST['indexToLike'];
+  $lista_dischi[$indexToLike]['liked']= !$lista_dischi[$indexToLike]['liked'];
+  file_put_contents('dischi.json', json_encode($lista_dischi));
+}
+
 
 
 

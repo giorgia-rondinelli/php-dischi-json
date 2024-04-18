@@ -48,6 +48,15 @@ createApp({
         this.listaDischi=res.data
         
       })
+    },
+    addLike(index){
+      const data = new FormData()
+      data.append('indexToLike', index)
+
+      axios.post(this.apiUrl,data)
+      .then(res=>{
+        this.listaDischi=res.data
+      })
     }
   },
   mounted(){

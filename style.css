@@ -28,7 +28,10 @@ img{
   
 }
 .bin{
- 
-
+  color: white;
   
+  
+}
+.liked{
+  color: red;
 }
